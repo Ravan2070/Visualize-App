@@ -28,6 +28,8 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
+
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -59,6 +61,8 @@ public class VisualizerActivity extends AppCompatActivity implements SharedPrefe
                 getResources().getBoolean(R.bool.pref_show_treble_default)));
         loadColorFromPreferences(sharedPreferences);
         loadSizeFromSharedPreferences(sharedPreferences);
+
+        Log.e("VisualizerActivity","Checking log");
 
         // Register the listener
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
